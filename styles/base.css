@@ -166,14 +166,3 @@ footer p:nth-child(2){
     color: var(--accent-color);
     font-size: .8rem;
 }
- 
-
-/* keyframes */
-@keyframes fadeIn{
-    from{
-        opacity: 0;
-    }
-    to{
-        opacity: 1;
-    }
-}
