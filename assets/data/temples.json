@@ -1,0 +1,52 @@
+[
+    {
+        "id": 1,
+        "name": "Aba Nigeria Temple",
+        "image": "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/aba-nigeria/400x250/aba-nigeria-temple-lds-273999-wallpaper.jpg"
+    },
+    {
+        "id": 2,
+        "name": "Accra Ghana Temple",
+        "image": "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/albuquerque-new-mexico/400x250/albuquerque-temple-lds-137883-wallpaper.jpg"
+    },
+    {
+        "id": 3,
+        "name": "Apia Samoa Temple",
+        "image": "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/apia-samoa/400x225/apia-samoa-temple-lds-495972-wallpaper.jpg"
+    },
+    {
+        "id": 4,
+        "name": "Asunción Paraguay Temple",
+        "image": "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/asuncion-paraguay/400x250/4-e49cfde212b104b97a0463371127c11e47f9c084.jpeg"
+    },
+    {
+        "id": 5,
+        "name": "Belém Brazil Temple",
+        "image": "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/belem-brazil/400x250/belem_brazil_temple_exterior2.jpg"
+    },
+    {
+        "id": 6,
+        "name": "Boston Massachusetts Temple",
+        "image": "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/boston-massachusetts/400x250/boston-temple-lds-945541-wallpaper.jpg"
+    },
+    {
+        "id": 7,
+        "name": "Brisbane Australia Temple",
+        "image": "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/brisbane-australia/400x250/brisbane-australia-temple-lds-745088-wallpaper.jpg"
+    },
+    {
+        "id": 8,
+        "name": "Denver Colorado Temple",
+        "image": "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/denver-colorado/400x250/denver-temple-lds-919294-wallpaper.jpg"
+    },
+    {
+        "id": 9,
+        "name": "Fort Lauderdale Florida Temple",
+        "image": "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/fort-lauderdale-florida/2018/400x250/09-Fort-Lauderdale-Temple-2032337.jpg"
+    },
+    {
+        "id": 10,
+        "name": "Fresno California Temple",
+        "image": "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/fresno-california/400x250/fresno-temple-lds-884388-wallpaper.jpg"
+    }
+]

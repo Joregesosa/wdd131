@@ -1,15 +1,26 @@
-*{
+* {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
-:root{
+
+:root {
     --primary-color: #3c0a64;
     --text-color: #fff;
     --accent-color: #fff15f;
 }
 
-header{
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    max-width: 968px;
+    margin-inline: auto;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+/* header */
+header {
     background-color: var(--primary-color);
     text-align: center;
     padding: 1rem;
@@ -18,22 +29,129 @@ header{
     align-items: center;
     justify-content: space-between;
     align-items: center;
+    max-width: 968px;
 }
-ul{
-    list-style: none;
+
+header.is-sticky {
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+    animation: slideDown 0.35s ease-out;
+}
+
+nav {
+    position: absolute;
+    z-index: 1000;
+    width: 100%;
+    background-color: var(--primary-color);
+    left: 0;
+    top: 0;
+    padding-block: 1rem;
+    display: none;
+    animation: slideUp .5s ease-in-out;
+}
+
+nav.show {
+    display: block;
+    animation: slideDown .5s ease-in-out;
+}
+
+ul {
     display: flex;
-    justify-content: center;
-    gap: 1rem;
-    padding: 1rem;;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
 }
-footer{
+
+ul li {
+    list-style: none;
+    padding-block: 1rem;
+    font-size: 1.3rem;
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    position: relative;
+    padding-inline: .5rem;
+    display: block;
+    width: 4.2rem;
+}
+
+.close_button,
+.menu_button {
+    position: absolute;
+    right: 1.5rem;
+    font-size: 2.6rem;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    top: .2rem;
+    color: var(--text-color);
+}
+
+.menu_button {
+    position: static;
+}
+
+/* main */
+main {
+    flex: 1 0 auto;
+    display: grid;
+    width: 100%;
+    padding: 1rem;
+}
+
+.album {
+    height: fit-content;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: .5rem 1rem;
+}
+
+.album_item {
+    width: 100%;
+    overflow: hidden;
+}
+
+.album_item figcaption {
+    padding: .5rem;
+    text-align: center;
+    font-size: .9rem;
+}
+
+.album_item img {
+    width: 100%;
+    aspect-ratio: 16/9;
+    object-fit: cover;
+}
+
+.album img:hover {
+    transform: scale(1.05);
+    transition: transform 3s;
+}
+
+/* footer */
+footer {
     padding: 1rem;
     background-color: var(--primary-color);
     color: var(--text-color);
     text-align: center;
 }
 
-footer p:nth-child(2){
+footer p:nth-child(2) {
     color: var(--accent-color);
     font-size: .8rem;
+}
+
+/* keyframes */
+@keyframes slideDown {
+    from {
+        transform: translateY(-100%);
+    }
+
+    to {
+        transform: translateY(0);
+    }
 }
