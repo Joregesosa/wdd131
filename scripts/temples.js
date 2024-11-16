@@ -10,13 +10,12 @@ const albums = document.querySelector('#album');
 
 current_year.innerHTML = new Date().getFullYear();
 last_modification.innerHTML = new Date(document.lastModified).toLocaleString();
+
 fetch('assets/data/temples.json')
     .then(response => response.json())
     .then(data => data.forEach((temple) => displayTemple(temple)))
     .catch(error => console.error(error.message));
 
-
-last_modification.innerHTML = new Date(document.lastModified).toLocaleString();
 
 function displayTemple(temple) {
     const { id, name, image } = temple;
