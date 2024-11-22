@@ -1,0 +1,38 @@
+ @media (min-width: 768px) {
+     .hero {
+         position: relative;
+     }
+
+     .hero>article {
+         position: absolute;
+
+     }
+
+     .hero>.weather {
+         right: 20px;
+         bottom: 20px;
+         width: 260px;
+         background-color: var(--off-accent-color);
+     }
+
+     .hero > .weather > figure {
+          display: none;
+     }
+
+     .hero>.data {
+         left: 20px;
+         top: 20px;
+         width: 320px;
+         background-color: var(--off-accent-color);
+     }
+
+     .hero>article>h2 {
+         padding-block: 1rem;
+         width: 90%;
+         color: var(--accent-color);
+         position: relative;
+         left: -0.5rem;
+         background-color: var(--off-secondary-color);
+         padding-block: 0.5rem;
+     }
+ }
