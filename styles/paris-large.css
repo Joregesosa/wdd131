@@ -3,25 +3,46 @@
          position: relative;
      }
 
+     .hero>picture {
+         width: 100%;
+         height: calc(100vh - 9.7rem);
+         min-height: 680px;
+         display: flex;
+         padding-bottom: .3rem;
+         background-color: var(--primary-color);
+     }
+
+     .hero>picture>img {
+         width: 100%;
+         object-position: bottom;
+         object-fit: cover;
+     }
+
      .hero>article {
          position: absolute;
 
      }
 
      .hero>.weather {
-         right: 20px;
-         bottom: 20px;
+         right: 30px;
+         bottom: 30px;
          width: 260px;
          background-color: var(--off-accent-color);
      }
 
-     .hero > .weather > figure {
-          display: none;
+     .hero>.weather>figure {
+         display: none;
+     }
+
+     .hero>.weather>h2::after {
+         content: "🌥️";
+         position: absolute;
+         right: 1rem;
      }
 
      .hero>.data {
-         left: 20px;
-         top: 20px;
+         left: 30px;
+         top: 30px;
          width: 320px;
          background-color: var(--off-accent-color);
      }
@@ -34,5 +55,8 @@
          left: -0.5rem;
          background-color: var(--off-secondary-color);
          padding-block: 0.5rem;
+         padding-left: 1rem;
+         text-align: left;
+
      }
  }
