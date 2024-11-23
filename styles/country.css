@@ -76,7 +76,6 @@ h1 {
     background-color: var(--accent-color);
 }
  
-
 article h2 {
     padding-block: 1rem;
 }
@@ -86,6 +85,16 @@ article ul {
     flex-direction: column;
     gap: .5rem;
     margin-top: .5rem;
+}
+
+article ul li {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: .5rem;
+    text-align: left;
+}
+li>strong{
+    text-align: right;
 }
 
 .weather>figure {

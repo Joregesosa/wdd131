@@ -1,9 +1,6 @@
 const current_year = document.querySelector('#current_year');
 const last_modification = document.querySelector('#last_modification');
-const temperatureElement = document.querySelector('#temperature');
-const conditionsElement = document.querySelector('#conditions');
-const windElement = document.querySelector('#wind');
-const windChillElement = document.querySelector('#windchill');
+
 function calculateWindChill(temperature, wind) {
     let result = 13.12 + 0.6215 * temperature - 11.37 * Math.pow(wind, 0.16) + 0.3965 * temperature * Math.pow(wind, 0.16);
     return result.toFixed(1);
@@ -16,31 +13,47 @@ const data = {
         type: "Metric",
     },
     location: {
-        Area: "105.4 km²",
-        Population: "2,148,271",
+        Area: "551,695 km²",
+        Population: "66,589,268",
         Capital: "Paris",
         Language: "French",
         Currency: "Euro (€)",
         Timezone: "CET (UTC+1)",
-        Callingcode: "+33",
-        Tld: ".fr",
+        "Calling Code": "+33",
+        "Internet Tld": ".fr",
     }
 }
 
 function displayWeather() {
+    const list =  document.querySelector('#weather');
     const { temperature, conditions, wind, type } = data.weather;
-    temperatureElement.textContent = type === "Metric" ? `${temperature}°C` : `${temperature}°F`;
-    conditionsElement.textContent = conditions;
-    windElement.textContent = type === "Metric" ? `${wind} km/h` : `${wind} mph`;
+    const temperatureValue = type === "Metric" ? `${temperature}°C` : `${temperature}°F`;
+    const windValue =  type === "Metric" ? `${wind} km/h` : `${wind} mph`;
+
     let metric = type==="Metric" && temperature <= 10 && wind > 4.8;
     let imperial = type==="Imperial" && temperature <= 50 && wind > 3;
-    
+    let windchillValue = "N/A";
     if (metric || imperial) {
-        windChillElement.textContent = type === "Metric" ? `${calculateWindChill(temperature, wind)}°C` : `${calculateWindChill(temperature, wind)}°F`;
-    } else {
-        windChillElement.textContent = "N/A";
-    }
+        windchillValue = type === "Metric" ? `${calculateWindChill(temperature, wind)}°C` : `${calculateWindChill(temperature, wind)}°F`;
+    }  
     
+    const temperatureItem = itemTemplate(temperatureValue, "Temperature");
+    const conditionsItem = itemTemplate(conditions, "Conditions");
+    const windItem = itemTemplate(windValue, "Wind");
+    const windchillItem = itemTemplate(windchillValue, "Wind Chill");
+
+    list.append(temperatureItem, conditionsItem, windItem, windchillItem);
+
+}
+
+function displayLocation(){
+    const location = data.location;
+    const list = document.querySelector('#location');
+    for (const key in location) {
+        const item = itemTemplate(location[key], key);
+        list.appendChild(item);
+    }
+
 }
 
 function itemTemplate(value, label) {
@@ -53,16 +66,6 @@ function itemTemplate(value, label) {
 
     return item;
     
-}
-
-function displayLocation(){
-    const location = data.location;
-    const list = document.querySelector('#location');
-    for (const key in location) {
-        const item = itemTemplate(location[key], key);
-        list.appendChild(item);
-    }
-
 }
 
 displayWeather();
