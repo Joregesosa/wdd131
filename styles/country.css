@@ -59,7 +59,7 @@ h1 {
     width: 100%;
     height: calc(100vh - 4.6rem);
     display: flex;
-    padding-bottom: .3rem;
+    padding-bottom: .2rem;
     background-color: var(--primary-color);
 }
 
@@ -94,9 +94,11 @@ article ul {
     height: 4rem;
     margin-bottom: 2rem;
 }
+
 .weather {
     border-top: 1px solid #cbcbcb;
 }
+
 footer {
     padding: 1rem;
     background-color: var(--primary-color);
