@@ -90,6 +90,7 @@ const filterOptions = {
     "small": (temple) => temple.area < 10000,
 }
 
+/* DOM elements */
 const header = document.querySelector('header');
 const close_button = document.querySelector('#close_button');
 const menu_button = document.querySelector('#menu_button');
@@ -97,6 +98,9 @@ const nav = document.querySelector('nav');
 const album = document.querySelector('#album');
 const nav_menu = document.querySelector('.nav_menu');
 const section_title = document.querySelector('#album .section_title');
+
+
+
 /* Functions */
 
 /**

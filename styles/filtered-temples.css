@@ -131,6 +131,7 @@ main {
     background-color: var(--card-bg-color);
     padding: 1rem;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    display: grid;
 }
 
  
@@ -156,6 +157,7 @@ main {
     aspect-ratio: 16/9;
     object-fit: cover;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.9);
+    align-self: flex-end;
 }
 
 .album img:hover {
