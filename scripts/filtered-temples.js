@@ -142,6 +142,7 @@ function createTempleCard({ templeName, location, dedicated, area, imageUrl }) {
 
     img.src = imageUrl;
     img.alt = templeName;
+    img.loading = 'lazy';
 
     album_item.appendChild(h3);
     album_item.appendChild(ul);
