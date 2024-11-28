@@ -10,13 +10,11 @@
         display: block;
     }
     
-    ul {
+    .nav_menu {
         flex-direction: row;
         gap: 1rem;
     }
-    ul li {
-        font-size: 1.1rem;
-    }
+  
     .close_button, .menu_button{
         display: none;
     }

@@ -8,13 +8,14 @@
     --primary-color: #3c0a64;
     --text-color: #fff;
     --accent-color: #fff15f;
+    --card-bg-color: #eeeeee;
 }
 
 body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    max-width: 968px;
+    max-width: 1280px;
     margin-inline: auto;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
@@ -29,10 +30,9 @@ header {
     align-items: center;
     justify-content: space-between;
     align-items: center;
-    max-width: 968px;
 }
 
-h1{
+h1 {
     font-size: 1.5rem;
 }
 
@@ -62,14 +62,17 @@ nav.show {
 }
 
 ul {
+    list-style: none;
+}
+
+.nav_menu {
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 100%;
 }
 
-ul li {
-    list-style: none;
+.nav_menu li {
     padding-block: 1rem;
     font-size: 1.3rem;
     text-align: center;
@@ -111,30 +114,48 @@ main {
 .album {
     height: fit-content;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-    gap: .5rem 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1rem;
 }
 
-.album > h2 {
+.album>h2 {
     grid-column: 1 / -1;
     text-align: center;
     padding: 1rem;
 }
+
 .album_item {
     width: 100%;
     overflow: hidden;
+    text-align: center;
+    background-color: var(--card-bg-color);
+    padding: 1rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
-.album_item figcaption {
-    padding: .5rem;
+ 
+.album_item > h3 {
     text-align: center;
-    font-size: .9rem;
+    font-size: 1.4rem;
+}
+
+.temple_info_list{
+    padding-block: 1rem;
+}
+
+.info_list_item {
+    padding-block: .2rem;
+}
+
+.info_list_item span {
+    color: var(--primary-color);
 }
 
 .album_item img {
     width: 100%;
     aspect-ratio: 16/9;
     object-fit: cover;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.9);
 }
 
 .album img:hover {

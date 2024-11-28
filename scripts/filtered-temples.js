@@ -55,33 +55,165 @@ const temples = [
         imageUrl:
             "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/mexico-city-mexico/400x250/mexico-city-temple-exterior-1518361-wallpaper.jpg"
     },
+    {
+        templeName: "Cochabamba Bolivia",
+        location: "Cochabamba, Bolivia",
+        dedicated: "2000, April, 30",
+        area: 35500,
+        imageUrl:"https://churchofjesuschristtemples.org/assets/img/temples/cochabamba-bolivia-temple/cochabamba-bolivia-temple-13699.jpg"
+    },
+    {
+        templeName: "Santo Domingo Dominican Republic",
+        location: "Santo Domingo, Dominican Republic",
+        dedicated: "2000, September, 17",
+        area: 67000,
+        imageUrl:"https://churchofjesuschristtemples.org/assets/img/temples/santo-domingo-dominican-republic-temple/santo-domingo-dominican-republic-temple-13014.jpg"
+    },
+    {
+        templeName: "Barranquilla Colombia",
+        location: "Barranquilla, Colombia",
+        dedicated: "2018, December, 9",
+        area: 25349,
+        imageUrl:"https://churchofjesuschristtemples.org/assets/img/temples/barranquilla-colombia-temple/barranquilla-colombia-temple-4806.jpg"
+        
+    }
+
 
 ];
-
+/**
+ * @description contains the filter options callbacks for the temples array
+ */
+const filterOptions = {
+    "old": (temple) => parseInt(temple.dedicated.split(',')[0]) < 1900,
+    "new": (temple) => parseInt(temple.dedicated.split(',')[0]) > 2000,
+    "large": (temple) => temple.area > 90000,
+    "small": (temple) => temple.area < 10000,
+}
 
 const header = document.querySelector('header');
 const close_button = document.querySelector('#close_button');
 const menu_button = document.querySelector('#menu_button');
 const nav = document.querySelector('nav');
+const album = document.querySelector('#album');
+const nav_menu = document.querySelector('.nav_menu');
+const section_title = document.querySelector('#album .section_title');
+/* Functions */
 
+/**
+ * @description Creates a temple card
+ * @param {object} param0 
+ * @returns {HTMLDivElement}
+ */
+function createTempleCard({ templeName, location, dedicated, area, imageUrl }) {
 
-/* events */
+    const album_item = document.createElement('div');
+    const h3 = document.createElement('h3');
+    const ul = document.createElement('ul');
+
+    const liLocation = document.createElement('li');
+    const liDedicated = document.createElement('li');
+    const liArea = document.createElement('li');
+
+    const spanLocation = document.createElement('span');
+    const spanDedicated = document.createElement('span');
+    const spanArea = document.createElement('span');
+
+    const liTextLocation = document.createTextNode(location);
+    const liTextDedicated = document.createTextNode(dedicated);
+    const liTextArea = document.createTextNode(area);
+
+    const img = document.createElement('img');
+
+    album_item.classList.add('album_item');
+    h3.textContent = templeName;
+    ul.classList.add('temple_info_list');
+
+    liLocation.classList.add('info_list_item');
+    liDedicated.classList.add('info_list_item');
+    liArea.classList.add('info_list_item');
+
+    spanLocation.textContent = 'Location:';
+    spanDedicated.textContent = 'Dedicated:';
+    spanArea.textContent = 'Size:';
+
+    img.src = imageUrl;
+    img.alt = templeName;
+
+    album_item.appendChild(h3);
+    album_item.appendChild(ul);
+
+    ul.append(liLocation, liDedicated, liArea);
+    liLocation.append(spanLocation, liTextLocation);
+    liDedicated.append(spanDedicated, liTextDedicated);
+    liArea.append(spanArea, liTextArea);
+
+    album_item.appendChild(img);
+
+    return album_item;
+
+}
+
+/**
+ * @description Loads temples into the album
+ * @param {Array} temples 
+ */
+function loadTemples(temples) {
+    temples.forEach((temple) => {
+        const templeCard = createTempleCard(temple);
+        album.appendChild(templeCard);
+    });
+}
+
+/**
+ * @description Filters the temples based on the callback
+ * @param {function} cb
+ * @param {Array} temples
+ */
+function filterTemple(cb, temples) {
+    const filteredTemples = temples.filter(cb);
+    album.innerHTML = '';
+    album.appendChild(section_title);
+    loadTemples(filteredTemples);
+}
+
+/* Event Listeners */
+
+/**
+ * @description Event listener for the menu button to show the nav menu
+ */
 menu_button.addEventListener('click', function () {
     nav.classList.toggle('show');
 });
 
+/**
+ * @description Event listener for the close button to hide the nav menu
+ */
 close_button.addEventListener('click', function () {
     nav.classList.toggle('show');
 });
 
-window.addEventListener('scroll', () => {
-    const currentScroll = window.scrollY;
-    if (currentScroll > 50) {
-        header.classList.add('is-sticky');
-    } else {
-        header.classList.remove('is-sticky');
+/**
+ * @description Event listener for the nav menu options to filter the temples
+ */
+nav_menu.addEventListener('click', function (e) {
+    e.preventDefault();
+    const target = e.target;
+    if (target.tagName === 'A') {
+        section_title.textContent = target.textContent;
+        const text = target.textContent.toLowerCase();
+    
+        nav.classList.toggle('show');
+        if (text === 'home') {
+            album.innerHTML = '';
+            loadTemples(temples);
+            return;
+        }
+        const cb = filterOptions[text];
+        filterTemple(cb, temples);
+
     }
+
 });
 
 
-
+loadTemples(temples);
