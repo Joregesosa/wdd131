@@ -1,5 +1,3 @@
-
-
 :root {
     /* pallete */
     --primary-color: #000000;
@@ -9,7 +7,7 @@
     /* Fonts */
     --heading-font: 'Merriweather', serif;
     --paragraph-font: 'Roboto', sans-serif;
- 
+
 }
 
 body {
@@ -57,24 +55,27 @@ nav a:visited {
     color: var(--text-color);
 }
 
-.palette{
+.palette {
     display: flex;
     flex-wrap: wrap;
     padding: 20px;
-    
+
 
 }
-.palette div{
+
+.palette div {
     width: 100px;
     height: 100px;
     margin: 10px;
     border-radius: 50%;
     border: 1px solid var(--text-color);
 }
-.palette_primary{
+
+.palette_primary {
     position: relative;
     background-color: var(--primary-color);
-    &::after{
+
+    &::after {
         content: 'Background Color';
         color: var(--text-color);
         position: absolute;
@@ -84,51 +85,54 @@ nav a:visited {
     }
 
 }
- 
-.palette_accent1{
+
+.palette_accent1 {
     background-color: var(--accent1-color);
     position: relative;
-    &::after{
-        content: 'Section Color';
-        color: var(--text-color);
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-    }
-
 }
-.palette_accent2{
+
+.palette_accent1::after {
+    content: 'Section Color';
+    color: var(--text-color);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.palette_accent2 {
     background-color: var(--accent2-color);
     position: relative;
-    &::after{
-        content: 'Heading Color';
-        color: var(--primary-color);
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-    }
-
 }
-.palette_text{
+
+.palette_accent2::after {
+    content: 'Heading Color';
+    color: var(--primary-color);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.palette_text {
     background-color: var(--text-color);
     position: relative;
-    &::after{
-        content: 'Text Color';
-        color: var(--primary-color);
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-    }
+
 }
 
-.mobile_wireframe{
+.palette_text::after {
+    content: 'Text Color';
+    color: var(--primary-color);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.mobile_wireframe {
     max-width: 420px;
 }
 
-.desktop_wireframe{
+.desktop_wireframe {
     max-width: 960px;
 }
- 
