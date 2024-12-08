@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Week 1 WDD 131 - Dynamic Web Fundamentals Jorge L. Sosa - Product Review Form">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+    <meta name="author" content="Jorge L. Sosa">
+    <link rel="stylesheet" href="styles/form.css">
+    <script defer src="scripts/getdates.js"></script>
+    <script defer src="scripts/form.js"></script>
+    <title>WDD 131 - Product Review - Dynamic Web Fundamentals - Jorge L. Sosa</title>
+</head>
+
+<body>
+    <header>
+        <h1>Product Review</h1>
+    </header>
+    <main>
+        <form action="review.html" method="get">
+            <label for="product">
+                Product Name:
+                <select id="product" name="product" required>
+                    <option value="" disabled selected>Select a Product ...</option>
+         
+                </select>
+            </label>
+
+            <fieldset id="rating" class="rating">
+                <legend>Overall Rating</legend>
+
+                <label for="rating1">
+                    &star;
+                    <input type="radio" id="rating1" name="rating" value="1" required>
+                </label>
+
+                <label for="rating2">
+                    &star; &star;
+                    <input type="radio" id="rating2" name="rating" value="2" required>
+                </label>
+
+                <label for="rating3">
+                    &star; &star; &star;
+                    <input type="radio" id="rating3" name="rating" value="3" required>
+                </label>
+
+                <label for="rating4">
+                    &star; &star; &star; &star;
+                    <input type="radio" id="rating4" name="rating" value="4" required>
+                </label>
+
+                <label for="rating5">
+                    &star; &star; &star; &star; &star;
+                    <input type="radio" id="rating5" name="rating" value="5" required>
+                </label>
+            </fieldset>
+
+            <label for="">
+                Date of Installation:
+                <input type="date" id="installation_date" name="installation_date" required>
+            </label>
+
+            <Fieldset class="features">
+                <legend>Which features did you find useful in the product? <br> <i>(check all that apply)</i>
+                </legend>
+                <label for="durability">
+                    <input type="checkbox" id="durability" name="features" value="durability">
+                    Durability
+                </label>
+                <label for="ease_of_use">
+                    <input type="checkbox" id="ease_of_use" name="features" value="ease_of_use">
+                    Ease of Use
+                </label>
+                <label for="performance">
+                    <input type="checkbox" id="performance" name="features" value="performance">
+                    Performance
+                </label>
+                <label for="design">
+                    <input type="checkbox" id="design" name="features" value="design">
+                    Design
+                </label>
+            </Fieldset>
+
+            <label for="comments">
+                Written Review <span>(Optional)</span>:
+                <textarea id="comments" name="comments" placeholder="Enter Your Comments ..."></textarea>
+            </label>
+            <label for="">
+                Your Name <span>(Optional)</span>:
+                <input type="text" id="name" name="name" placeholder="Enter Your Name ...">
+            </label>
+
+            <button type="submit">Post Review</button>
+        </form>
+
+
+    </main>
+    <footer>
+        <p>&copy;<span id="current_year"></span> 👨🏽‍💻 Jorge Luis Sosa 👨🏽‍💻 Bolivia</p>
+        <p>Last Modification: <span id="last_modification"></span></p>
+    </footer>
+</body>
+
+</html>
