@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="WDD 131 - Web Portfolio -Dynamic Web Fundamentals - Jorge L. Sosa">
+    <meta name="author" content="Jorge L. Sosa">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/large.css">
+    <script src="scripts/main.js" defer></script>
+    <title>WDD 131 - Web Portfolio -Dynamic Web Fundamentals - Jorge L. Sosa</title>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>
+                Web Portfolio
+            </h1>
+            <nav class="">
+                <ul>
+                    <li>
+                        <a href="index.html">
+                            <svg style="width: 24px; height:24px">
+                                <use xlink:href="images/icons/home.svg#home"></use>
+                            </svg>
+                            <!-- Home -->
+                        </a>
+                    </li>
+                    <li>
+                        <a href="projects.html">
+                            <svg style="width: 24px; height:24px">
+                                <use xlink:href="images/icons/home.svg#home"></use>
+                            </svg>
+                            <!-- Projects -->
+                        </a>
+                    </li>
+                    <li>
+                        <a href="contact.html">
+                            <svg style="width: 24px; height:24px">
+                                <use xlink:href="images/icons/home.svg#home"></use>
+                            </svg>
+                            <!-- Contact -->
+                        </a>
+                    </li>
+                </ul>
+                <button class="menu_button_close">
+                    &times;
+                </button>
+            </nav>
+            <button class="menu_button_open">
+                &#9776;
+            </button>
+        </header>
+        <main>
+            <section class="hero">
+                <div class="profile">
+                    <figure>
+                        <img src="images/profile.webp" alt="profile image">
+                    </figure>
+                    <h2>Jorge L. Sosa</h2>
+                    <p>Web Full Stack Developer</p>
+                </div>
+                <div class="summary">
+                    <p>My name is Jorge Luis Sosa. I am from the Dominican Republic, but I'm currently living in
+                        Bolivia. I
+                        am a student at Brigham Young University. I am married and have a handsome son. I am a member of
+                        The
+                        Church of Jesus Christ of Latter-day Saints.
+                    </p>
+
+                    <a href="" target="_blank" class="resume_download">
+                        Download Resume
+                    </a>
+
+                </div>
+            </section>
+            <section class="technologies">
+                <h2>Technologies</h2>
+                <ul id="technologies-list">
+
+                </ul>
+            </section>
+            <section class="education">
+                <h2>Education</h2>
+
+                <div class="education-card">
+                    <h3>Brigham Young University</h3>
+                    <p>Bachelor's of Software Development</p>
+                    <p>Apr 2024 - Dec 2026</p>
+                </div>
+                <div class="education-card">
+                    <h3>Brigham Young University</h3>
+                    <p>Pathway Certificate</p>
+                    <p>Sept 2023 - Apr 2024</p>
+                </div>
+                <div class="education-card">
+                    <h3>FUNVAL International</h3>
+                    <p>Web Full Stack Development - Bootcamp</p>
+                    <p>May 2023 - Aug 2023</p>
+                </div>
+            </section>
+
+            <section class="experience">
+                <h2>Experience</h2>
+                <div class="experience-timeline">
+                    <h3 class="heading">Funval International</h3>
+                    <p class="description"><b>Frontend Developer Instructor:</b>
+                        Managed classes with an average of 15 students, fostering a motivating and dynamic learning environment while adapting to
+                        the unique needs of each group.
+                    </p>
+                    <p class="date">Oct 2023 - Present</p>
+                </div>
+                <div class="experience-timeline">
+                    <h3 class="heading">Tesoria R.D.</h3>
+                    <p class="description"> <b>Full Stack Developer - Freelance:</b> Developed a full-stack web application using PHP, Laravel, and ReactJS, implemented user management, improved service request handling, and delivered a scalable web application on time.</p>
+                    <p class="date">aug 2023 - oct 2023</p>
+                </div>
+                <div class="experience-timeline">
+                    <h3 class="heading">Soluciones Ankerite</h3>
+                    <p class="description"><b>IT Support: </b>optimized system performance, resolved technical issues, provided support to branch offices, streamlined procurement processes, and supported financial systems.</p>
+                    <p class="date">mar 2017 - mar 2023</p>
+                </div>
+            </section>
+
+
+        </main>
+
+        <footer>
+            <nav>
+                <ul>
+                    <li>
+                        <a href="index.html">
+                            <svg >
+                                <use xlink:href="images/icons/github.svg#github"></use>
+                            </svg>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="projects.html">
+                            <svg >
+                                <use xlink:href="images/icons/whatsapp.svg#whatsapp"></use>
+                            </svg>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="contact.html">
+                            <svg >
+                                <use xlink:href="images/icons/linkedin.svg#linkedin"></use>
+                            </svg>
+                        </a>
+                    </li>
+                </ul>
+            <p>&copy; 2024 - Jorge L. Sosa - all right reserved </p>
+        </footer>
+    </div>
+
+</body>
+
+</html>
