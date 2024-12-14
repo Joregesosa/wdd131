@@ -16,9 +16,13 @@ const technologies = [
     { id: 15, name: 'FastAPI', icon: 'fastapi' }
 ];
 const technologies_list = document.querySelector('#technologies-list');
+const open_menu = document.querySelector('#open-menu');
+const close_menu = document.querySelector('#close-menu');
+const main_menu = document.querySelector('#main-menu');
 
-
-
+function toggleMenu(params) {
+    main_menu.classList.toggle('show');
+}
 
 function getTechnologyItem(icon) {
     const item = document.createElement('li');
@@ -35,3 +39,6 @@ technologies.forEach(technology => {
     const element = getTechnologyItem(technology.icon);
     technologies_list.innerHTML += element.outerHTML;
 });
+
+open_menu.addEventListener('click', toggleMenu);
+close_menu.addEventListener('click', toggleMenu);

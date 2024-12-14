@@ -1,5 +1,5 @@
 :root {
-    /* pallete */
+    /* palette */
     --primary-color: #000000;
     --accent1-color: #0d47a1;
     --accent2-color: #00BFFF;
@@ -54,19 +54,22 @@ header>h1 {
     text-shadow: 2px 2px 2px var(--accent1-color);
 }
 
-header>nav {
+.main_menu {
     display: flex;
     position: fixed;
     right: .5rem;
-    /* top: 4rem; */
-    background-color: var(--accent1-color);
+    background: linear-gradient(120deg,  var(--accent1-color),var(--accent2-color), var(--accent1-color));
+    background-size: 240% 240%;
     height: fit-content;
     padding: .5rem;
     border-radius: .5rem;
-    display: none;
+    z-index: 100;
+
+    top: -50%;
+    transition: top .4s ease-in-out;
 }
 
-header>nav>ul {
+.main_menu > .menu__list {
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -74,15 +77,17 @@ header>nav>ul {
     align-items: end;
     padding: 2rem .5rem;
     border-radius: .5rem;
-    gap: 2rem;
+    gap: 1.5rem;
     font: bold 1.3rem var(--heading-font);
     background-color: var(--primary-color);
-    margin-top: 2rem;
+    margin-top: 2.4rem;
 }
 
-header nav>ul svg {
+.main_menu > .menu__list svg {
     color: var(--accent2-color);
     filter: drop-shadow(2px 2px 2px var(--accent1-color));
+    width: 1.8rem;
+    aspect-ratio: 1/1;
 }
 
 .menu_button_open,
@@ -100,7 +105,12 @@ header nav>ul svg {
     left: 50%;
     transform: translateX(-50%);
     font-size: 2.5rem;
-    top: -2px;
+    top: .5rem;
+    background-color: var(--primary-color);
+    height: fit-content;
+    padding: .2rem .5rem;
+    border-radius: .5rem;
+    line-height: .6;
 }
 
 main {
@@ -133,9 +143,9 @@ main {
 .profile>h2 {
     font-size: 1.8rem;
     color: var(--secondary-text-color);
-    text-shadow: 2px 2px 2px var(--accent1-color);
+    filter: drop-shadow(2px 2px 1px var(--accent1-color));   
 }
-
+ 
 .profile>p {
     font-size: .8rem;
     margin-bottom: 1rem;
@@ -163,7 +173,6 @@ main {
     background-color: var(--accent2-color);
     color: var(--primary-color);
 }
-
 
 .technologies {
     order: 1;
@@ -194,7 +203,6 @@ main {
     object-fit: cover;
     filter: drop-shadow(1px 1px 1px var(--accent1-color));
     cursor: pointer;
-
 }
 
 .education {
@@ -236,7 +244,6 @@ main {
     border-radius: .5rem;
     overflow: hidden;
     box-shadow: 2px 2px 8px var(--accent1-color);
-
 }
 
 .experience-timeline:nth-child(odd) {
@@ -287,15 +294,25 @@ footer {
     border-top: solid 1px var(--accent1-color);
     padding-top: 1rem;
 }
- 
-footer>nav>ul {
+
+.social_media_list {
     display: flex;
     gap: 1rem;
     justify-content: center;
     padding-bottom: .5rem;
 }
 
+.list__item {
+    width: 2rem;
+    cursor: pointer;
+}
+
 footer>nav>ul svg {
-    width: 1.8rem;
+    width: 100%;
     aspect-ratio: 1/1;
+}
+
+.show {
+    top: 3%;
+    transition: top .4s ease-in-out;
 }
