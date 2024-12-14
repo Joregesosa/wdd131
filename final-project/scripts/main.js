@@ -22,6 +22,7 @@ const main_menu = document.querySelector('#main-menu');
 
 function toggleMenu(params) {
     main_menu.classList.toggle('show');
+    open_menu.classList.toggle('hide');
 }
 
 function getTechnologyItem(icon) {
