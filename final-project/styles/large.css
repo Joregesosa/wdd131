@@ -103,10 +103,22 @@
          justify-content: center;
          padding-inline: 4rem 12rem;
          background-color: var(--accent1-color);
-
          height: 100%;
-         clip-path: polygon(0 0, 100% 0, 66% 100%, 0% 100%);
+         position: relative;
+         overflow: hidden;
      }
+
+     .summary::before {
+         content: "";
+        position: absolute;
+        width: 0;
+        height: 0;
+        bottom: 0;
+        right: 0;
+        border-left: 180px solid transparent;
+        border-bottom: 50vh solid black;
+      }
+
 
      .summary>p {
          font-size: 1.2rem;
@@ -188,9 +200,11 @@
      .education_card>p:nth-child(3) {
          font-size: .9rem;
      }
+
      .technologies {
          padding-inline: 2rem;
      }
+
      .technologies>h2 {
          padding-block: 0 2rem;
      }
@@ -253,8 +267,8 @@
          background-color: var(--accent1-color);
          border-radius: .5rem;
          place-self: center;
-          max-width: 440px;
-          box-shadow: 3px 3px 2px var(--primary-color);
+         max-width: 440px;
+         box-shadow: 3px 3px 2px var(--primary-color);
          filter: drop-shadow(1px 1px 0px var(--secondary-text-color));
      }
 
@@ -278,8 +292,15 @@
      .experience_timeline>.description {
          font-size: 1rem;
      }
-     .experience_phrase > p {
+
+     .experience_phrase>p {
          font-size: 1.2rem;
+     }
+
+     .experience .action_link,
+     .education .action_link {
+         box-shadow: 3px 3px 2px var(--primary-color);
+         filter: drop-shadow(1px 1px 0px var(--accent1-color));
      }
 
      @keyframes translate {

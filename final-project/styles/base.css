@@ -408,7 +408,6 @@ main {
     grid-area: date;
     font-size: .8rem;
     font-style: italic;
-    color: var(text-color);
     background-color: var(--accent1-color);
     align-self: center;
     display: flex;
@@ -433,8 +432,9 @@ footer {
     font-size: .8rem;
     color: var(--secondary-text-color);
     margin-top: 2rem;
-    border-top: solid 1px var(--accent1-color);
-    padding-top: 1rem;
+    border: solid 2px var(--accent1-color);
+    padding-block: 1rem .5rem; 
+    border-radius: .5rem;
 }
 
 .social_media_list {
