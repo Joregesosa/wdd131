@@ -2,26 +2,24 @@ import { icons_technologies } from "../data/icons-technologies.js";
 
 export function ProjectDetails({ title, long_description, repository, live_demo, image_mobile, image_desktop, technologies }) {
     return `
-       <section class="project_details">
+       
             <h2 id="project-title">${title}</h2>
+ 
+            <p id="project-description">
+                ${long_description}
+            </p>
+ 
+ 
+            <figure id="mobile-image" class="details__mobile_image">
+                <figcaption>Mobile Preview</figcaption>
+                <img src="${image_mobile}" alt="${long_description}" loading="lazy" width="280" height="640" />
+            </figure>
 
-            <div class="description__container">
-                <p id="project-description">
-                    ${long_description}
-                </p>
-            </div>
-
-            <div class="images__container">
-                <figure id="mobile-image" class="details__mobile_image">
-                    <figcaption>Mobile Preview</figcaption>
-                    <img src="${image_mobile}" alt="${long_description}" loading="lazy"/>
-                </figure>
-
-                <figure id="desktop-image" class="details__desktop_image">
-                    <figcaption>Desktop Preview</figcaption>
-                    <img src="${image_desktop}" alt="${long_description}" loading="lazy"/>
-                </figure>
-            </div>
+            <figure id="desktop-image" class="details__desktop_image">
+                <figcaption>Desktop Preview</figcaption>
+                <img src="${image_desktop}" alt="${long_description}" loading="lazy"/>
+            </figure>
+ 
 
             <div class="details__actions">
                 <a href="${repository}" id="source-code" target="_blank">
@@ -38,7 +36,6 @@ export function ProjectDetails({ title, long_description, repository, live_demo,
                     ${getTechs(technologies)}
                 </ul>
             </div>
-        </section>
     `;
 }
 
