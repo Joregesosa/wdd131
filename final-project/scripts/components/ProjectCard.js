@@ -13,6 +13,7 @@ export function ProjectCard({ id, image_desktop, title, short_description }) {
 
     image.src = image_desktop;
     image.alt = title;
+    image.loading = 'lazy';
     projectTitle.textContent = title;
     projectDescription.textContent = short_description;
     projectLink.href = `project-details.html?id=${id}`;
