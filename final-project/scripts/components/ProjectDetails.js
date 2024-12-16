@@ -9,25 +9,34 @@ export function ProjectDetails({ title, long_description, repository, live_demo,
                 ${long_description}
             </p>
  
- 
-            <figure id="mobile-image" class="details__mobile_image">
-                <figcaption>Mobile Preview</figcaption>
-                <img src="${image_mobile}" alt="${long_description}" loading="lazy" width="280" height="640" />
-            </figure>
-
-            <figure id="desktop-image" class="details__desktop_image">
+            ${image_mobile && `
+                 <figure id="mobile-image" class="details__mobile_image">
+                    <figcaption>Mobile Preview</figcaption>
+                    <img src="${image_mobile}" alt="${title}" loading="lazy" width="280" height="640" />
+                </figure>
+                `}
+           
+            ${image_desktop && `<figure id="desktop-image" class="details__desktop_image">
                 <figcaption>Desktop Preview</figcaption>
-                <img src="${image_desktop}" alt="${long_description}" loading="lazy"/>
-            </figure>
+                <img src="${image_desktop}" alt="${title}" loading="lazy"/>
+            </figure>`}
+            
  
 
             <div class="details__actions">
-                <a href="${repository}" id="source-code" target="_blank">
-                    Source Code
-                </a>
-                <a href="${live_demo}" id="live-demo" target="_blank">
-                    Live Demo
-                </a>
+                ${repository &&
+                    ` 
+                        <a href="${repository}" id="source-code" target="_blank">
+                            Source Code
+                        </a>
+                    `}
+               
+                ${live_demo && `
+                    <a href="${live_demo}" id="live-demo" target="_blank">
+                        Live Demo
+                    </a>
+                `}
+                
             </div>
 
             <div class="details__technologies">
