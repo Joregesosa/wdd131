@@ -3,6 +3,9 @@ main {
     flex-direction: column;
     gap: 3rem;
 }
+header{
+    border: none;
+} 
 
 .profile {
     text-align: center;
