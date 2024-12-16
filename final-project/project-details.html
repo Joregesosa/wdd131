@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="WDD 131 - Web Portfolio -Projects -Dynamic Web Fundamentals - Jorge L. Sosa">
+    <meta name="description" content="WDD 131 - Web Portfolio -Dynamic Web Fundamentals - Jorge L. Sosa">
     <meta name="author" content="Jorge L. Sosa">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
@@ -12,11 +12,12 @@
     <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
     <link rel="stylesheet" href="styles/common-small.css">
     <link rel="stylesheet" href="styles/common-large.css">
-    <link rel="stylesheet" href="styles/project.css">
+    <link rel="stylesheet" href="styles/project-details.css">
+    <link rel="stylesheet" href="styles/project-details-large.css">
 
-    <script src="scripts/common.js" defer type="module"></script>
-    <script src="scripts/projects.js" defer type="module"></script>
-    <title>WDD 131 - Web Portfolio - Projects -Dynamic Web Fundamentals - Jorge L. Sosa</title>
+    <script src="scripts/common.js" defer></script>
+
+    <title>WDD 131 - Web Portfolio -Dynamic Web Fundamentals - Jorge L. Sosa</title>
 </head>
 
 <body>
@@ -61,19 +62,47 @@
             </button>
         </header>
         <main>
-            <h2>Projects</h2>
+            <h2 id="project-title">Project Name</h2>
 
-            <p class="intro">
-                This is a list of projects that I have worked on. Click on the project to see more details.
-            </p>
+            <section class="project_details">
+                <div class="description__container">
+                    <p id="project-description">
 
-            <section class="project_list">
- 
+                    </p>
+                </div>
+
+                <div class="images__container">
+                    <figure id="mobile-image" class="details__mobile_image">
+                        <figcaption>Mobile Preview</figcaption>
+                        <!-- <img src="images/weather-app-mobile-m.webp" alt="mobile-placeholder"> -->
+                    </figure>
+
+                    <figure id="desktop-image" class="details__desktop_image">
+                        <figcaption>Desktop Preview</figcaption>
+                        <!-- <img src="images/weather-app-desktop-l.webp" alt="desktop-placeholder"> -->
+                    </figure>
+
+                </div>
+
+                <div class="details__actions">
+                    <a href="" id="source-code" target="_blank">
+                        Source Code
+                    </a>
+                    <a href="" id="live-demo" target="_blank">
+                        Live Demo
+                    </a>
+
+                </div>
+
+                <div class="details__technologies">
+                    <h3>Technologies</h3>
+                    <ul class="technologies__list" id="technologies-list">
+
+                    </ul>
+
+                </div>
 
             </section>
-
-
-
 
         </main>
 
@@ -106,7 +135,7 @@
             <p>&copy; 2024 - Jorge L. Sosa - all right reserved </p>
         </footer>
     </div>
-
+    <script src="scripts/project-details.js" type="module"></script>
 </body>
 
 </html>

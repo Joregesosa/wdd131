@@ -1,0 +1,33 @@
+@media screen and (min-width: 768px) {
+    .project_details{
+        position: relative;
+    }
+    .images__container, 
+    .project_details > .description__container {
+        margin-top: 2rem;
+        display: grid;
+        gap: 2rem;
+        grid-template-columns: 1fr 3fr;
+    }
+ 
+    .project_details > .description__container {
+        position: absolute;
+        bottom: 16rem;
+    }
+
+    .description__container > p{
+        grid-column: 2;
+    }
+
+    .details__actions{
+        justify-content: end;
+    }
+    
+}
+
+@media screen and (min-width: 960px) {
+    .project_details > .description__container {
+        bottom: 18rem;
+    }
+    
+}

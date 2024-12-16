@@ -1,0 +1,89 @@
+body {
+    min-height: 100vh;
+}
+
+main {
+    width: 100%;
+    padding: 2rem;
+    flex-grow: 1;
+}
+
+main>h2 {
+    font-size: 2rem;
+    text-shadow: 2px 2px 2px var(--accent1-color);
+    filter: drop-shadow(2px 2px 0px var(--primary-color));
+    text-align: center;
+}
+
+main>.intro {
+    margin: 1rem 0;
+    text-align: center;
+    font-size: clamp(1rem, 2vw, 1.5rem);
+    max-width: 640px;
+    margin-inline: auto;
+}
+
+.list__card {
+    border: solid 1px var(--accent1-color);
+}
+
+.list__card:hover {
+    transform: scale(1.05);
+    transition: transform .5s ease;
+    box-shadow: 0 0 4px var(--accent2-color);
+}
+
+.project_list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 320px);
+    gap: 1.5rem;
+    padding-top: 1rem;
+    justify-content: center;
+}
+
+.project_list>.list__card {
+    width: 100%;
+    background-color: var(--primary-color);
+    overflow: hidden;
+    border-radius: .5rem;
+    max-width: 320px;
+}
+
+.list__card figure {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    height: 200px;
+    width: 100%;
+}
+
+.list__card img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.list__card .card__content {
+    padding: 1rem;
+    color: var(--text-color);
+    background-color: var(--accent1-color);
+    height: 160px;
+}
+
+.card__content>h3 {
+    font-size: 1.5rem;
+    margin-bottom: .5rem;
+    color: var(--secondary-text-color);
+    text-shadow: 2px 2px 2px var(--accent1-color);
+    filter: drop-shadow(2px 2px 0px var(--primary-color));
+}
+
+.card__content>p {
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-align: justify;
+}

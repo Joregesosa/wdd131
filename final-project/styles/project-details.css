@@ -1,0 +1,120 @@
+ main {
+     width: 100%;
+     padding: 2rem;
+     flex-grow: 1;
+ }
+
+ main>h2 {
+     font-size: clamp(1.5rem, 5vw, 2.5rem);
+     text-shadow: 2px 2px 2px var(--accent1-color);
+     filter: drop-shadow(2px 2px 0px var(--primary-color));
+     text-align: center;
+ }
+
+ .project_details p {
+     font-size: clamp(1rem, 2vw, 1.5rem);
+     text-align: justify;
+     margin: 1rem 0;
+ }
+
+ .images__container {
+     display: grid;
+     gap: 2rem;
+ }
+/* 
+ .details__mobile_image {
+     margin: 1rem auto;
+     aspect-ratio: 9/16;
+    max-height: 480px;
+    overflow: hidden;
+
+ } */
+
+ .details__mobile_image figcaption,
+ .details__desktop_image figcaption {
+     font-size: clamp(1.5rem, 2vw, 2rem);
+     text-align: center;
+     padding-block: .5rem;
+     margin: .5rem 0;
+     background-color: var(--accent1-color);
+     border-radius: .5rem;
+ }
+
+ .details__mobile_image img,
+ .details__desktop_image img {
+     width: 100%;
+     border-radius: 10px;
+     box-shadow: 2px 2px 2px var(--primary-color);
+     filter: drop-shadow(2px 2px 0px var(--accent1-color));
+ }
+
+ /* .details__desktop_image figure {
+     display: flex;
+     justify-content: center;
+     margin: 1rem auto;
+     aspect-ratio: 16/9;
+ } */
+
+ /* .details__desktop_image img {
+     width: 100%;
+     border-radius: 10px;
+     box-shadow: 2px 2px 2px var(--accent1-color);
+     box-shadow: 2px 2px 2px var(--primary-color);
+     filter: drop-shadow(2px 2px 0px var(--accent1-color));
+ } */
+
+ .details__actions {
+     display: flex;
+     justify-content: space-evenly;
+     gap: 1rem;
+     margin: 2rem 0;
+ }
+
+ .details__actions a {
+     padding: .5rem 2rem;
+     border-radius: 10px;
+     background-color: var(--accent1-color);
+     color: var(--text-color);
+     font-size: clamp(1rem, 2vw, 1.5rem);
+     text-decoration: none;
+     box-shadow: 2px 2px 2px var(--primary-color);
+     filter: drop-shadow(1px 1px 0px var(--accent2-color));
+ }
+
+ .details__actions a:nth-child(1) {
+     background-color: var(--secondary-text-color);
+        color: var(--primary-color);
+ }
+
+.details__technologies h3 {
+    font-size: clamp(1.5rem, 5vw, 2.5rem);
+     text-align: center;
+     padding-block: 1rem;
+ }
+ .technologies__list {
+     display: grid;
+     grid-template-columns: repeat(auto-fill, minmax(60px, 1fr));
+     gap: 1rem;
+     border: solid 1px var(--accent1-color);
+     padding: .5rem;
+ }
+
+ .technologies__list>li {
+     width: 100%;
+     aspect-ratio: 1/1;
+     overflow: hidden;
+ }
+
+ .technology {
+     padding: .5rem;
+     width: 100%;
+     aspect-ratio: 1/1;
+     object-fit: cover;
+     filter: drop-shadow(1px 1px 1px var(--accent1-color));
+     cursor: pointer;
+ }
+
+ footer{
+    margin-top: 0;
+    
+ }
