@@ -38,7 +38,7 @@ export const my_projects = [
         short_description: " The API allows the admin user to register students and review and approve their services reports. The API also allows the students to submit their services reports.",
         long_description: "The Services API was created as demo project for my students to practice using APIs. The API allows the admin user to register students and review and approve their services reports. The API also allows the students to submit their services reports. The API is created using Nodejs, Express, google drive API, and PostgreSQL.",
         image_mobile: "",
-        image_desktop: "",
+        image_desktop: "images/backend-project.webp",
         technologies: ["Nodejs", "Express", "PostgreSQL", "Google Drive API"],
         repository: "https://github.com/FunvalProgra/horas-servicio-api", 
         live_demo: "",

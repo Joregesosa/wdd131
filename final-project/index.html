@@ -14,8 +14,7 @@
     <link rel="stylesheet" href="styles/base.css">
     <link rel="stylesheet" href="styles/common-large.css">
     <link rel="stylesheet" href="styles/large.css">
-
-    <script src="scripts/main.js" defer></script>
+    <script src="scripts/common.js" defer></script>
     <title>WDD 131 - Web Portfolio -Dynamic Web Fundamentals - Jorge L. Sosa</title>
 </head>
 
@@ -45,7 +44,7 @@
                     </li>
                     <li class="menu__item">
                         <a href="hire-me.html">
-                            <svg>
+                            <svg>   
                                 <use xlink:href="images/icons/contact.svg#contact"></use>
                             </svg>
                             <span class="item__text">Hire me</span>
@@ -64,7 +63,7 @@
             <section class="hero">
                 <div class="profile">
                     <figure>
-                        <img src="images/profile.webp" alt="profile image">
+                        <img src="images/profile.webp" alt="profile image" loading="lazy">
                     </figure>
                     <h2>Jorge L. Sosa</h2>
                     <p>Web Full Stack Developer</p>
@@ -202,7 +201,7 @@
             <p>&copy; 2024 - Jorge L. Sosa - all right reserved </p>
         </footer>
     </div>
-
+    <script src="scripts/main.js" type="module"></script>
 </body>
 
 </html>
