@@ -1,9 +1,10 @@
 import myProjects from './data/my-projects.js';
 import { TechnologyItem } from './components/TechnologyItem.js';
-import icons_technologies from './data/icons-technologies.js';
+import {icons_technologies} from './data/icons-technologies.js';
+import {ProjectImage} from './components/ProjectImage.js';
 
-// const image_mobile = document.querySelector('#mobile-image > img')
-// const image_desktop = document.querySelector('#desktop-image > img')
+const mobile_image = document.querySelector('#mobile-image');
+const desktop_image = document.querySelector('#desktop-image');
 const source_code = document.querySelector('#source-code');
 const live_demo = document.querySelector('#live-demo');
 
@@ -14,18 +15,12 @@ function showProjectDetails() {
 
     source_code.href = project.repository;
     live_demo.href = project.live_demo;
-    const imgMobileNode = document.createElement('img');
-    imgMobileNode.src = project.image_mobile;
-    imgMobileNode.alt = project.title;
- 
-    document.querySelector('#mobile-image').appendChild(imgMobileNode);
+    
+    const image_mobile = ProjectImage(project.title, project.image_mobile);
+    const image_desktop = ProjectImage(project.title, project.image_desktop);
+    mobile_image.appendChild(image_mobile);
+    desktop_image.appendChild(image_desktop);
 
-    const imgDesktopNode = document.createElement('img');
-    imgDesktopNode.src = project.image_desktop;
-    imgDesktopNode.alt = project.title;
- 
-    document.querySelector('#desktop-image').appendChild(imgDesktopNode);
- 
 
     project.technologies.forEach(technology => {
         const tech = icons_technologies.find(tech => tech.name.toLocaleLowerCase() === technology.toLocaleLowerCase());
@@ -37,8 +32,8 @@ function showProjectDetails() {
 
     RemoveIfEmptyValue(source_code, project.repository);
     RemoveIfEmptyValue(live_demo, project.live_demo);
-    // RemoveIfEmptyValue(image_mobile.parentElement, project.image_mobile);
-    // RemoveIfEmptyValue(image_desktop.parentElement, project.image_desktop);
+    RemoveIfEmptyValue(mobile_image, project.image_mobile);
+    RemoveIfEmptyValue(desktop_image, project.image_desktop);
 
 }
 
@@ -54,5 +49,6 @@ function RemoveIfEmptyValue(element, value) {
         element.remove();
     }
 }
+
 
 showProjectDetails();

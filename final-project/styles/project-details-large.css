@@ -2,15 +2,15 @@
     .project_details{
         position: relative;
     }
-    .images__container, 
-    .project_details > .description__container {
+    .images__container:has(#mobile-image), 
+    .project_details:has(#mobile-image) > .description__container {
         margin-top: 2rem;
         display: grid;
         gap: 2rem;
         grid-template-columns: 1fr 3fr;
     }
  
-    .project_details > .description__container {
+    .project_details:has(#mobile-image) > .description__container {
         position: absolute;
         bottom: 16rem;
     }
@@ -26,7 +26,7 @@
 }
 
 @media screen and (min-width: 960px) {
-    .project_details > .description__container {
+    .project_details:has(#mobile-image) > .description__container {
         bottom: 18rem;
     }
     
